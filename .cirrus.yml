@@ -2,20 +2,26 @@
 task:
   container:
     image: gcc:latest
-  build_script:
+  setup_script:
     - apt update
     - apt install -y python3
     - apt install -y python3-pip
     - pip3 install conan
     - pip3 install cmake
+  build_script:
     - ./build.sh release x64 linux
 
 # vs2015
-#task:
-#  windows_container:
-#    image: cirrusci/windowsservercore:2016
-#  build_script:
-#    - build release x64 vs2015
+task:
+  windows_container:
+    image: cirrusci/windowsservercore:2016
+  setup_script:
+    - python3 --version
+    - pip3 --version
+    - pip3 install conan
+    - pip3 install cmake
+  build_script:
+    - build release x64 vs2015
 
 # macOS
 #task:
