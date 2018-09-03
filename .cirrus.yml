@@ -3,10 +3,12 @@ task:
   container:
     image: openjdk:8-jdk
   build_script:
-    - python --version
-    - cmake --version
-    - conan --version
+    - curl https://bootstrap.pypa.io/get-pip.py -o get-pip.py
+    - python get-pip.py
     - pip --version
+    - pip install conan
+    - conan --version
+    - cmake --version
     - ./build.sh release x64 linux
 
 # vs2015
