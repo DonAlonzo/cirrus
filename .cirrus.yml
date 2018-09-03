@@ -1,74 +1,83 @@
-# Linux
+# riks-java
 task:
   container:
     image: openjdk:8-jdk
-
-  # riks-java
-  task:
-    build_script:
-      - echo "riks-java"
+  build_script:
+    - echo "riks-java"
  
-  # riks-js
-  task:
-    build_script:
-      - echo "riks-js"
+# riks-js
+task:
+  container:
+    image: openjdk:8-jdk
+  build_script:
+    - echo "riks-js"
   
-  # riks-cpp (Linux)
-  task:
-    build_script:
-      - echo "riks-cpp-linux"
+# riks-cpp (Linux)
+task:
+  container:
+    image: openjdk:8-jdk
+  build_script:
+    - echo "riks-cpp-linux"
 
-  # riks-node (Linux)
-  task:
-    build_script:
-      - echo "riks-node-linux"
+# riks-node (Linux)
+task:
+  container:
+    image: openjdk:8-jdk
+  build_script:
+    - echo "riks-node-linux"
 
-# Windows
+# riks-net
 task:
   windows_container:
     image: cirrusci/windowsservercore:2016
+  build_script:
+    - echo riks-net
 
-  # riks-net
-  task:
-    build_script:
-      - echo riks-net
+# riks-cpp (vs2015)
+task:
+  windows_container:
+    image: cirrusci/windowsservercore:2016
+  build_script:
+    - echo riks-cpp-vs2015
 
-  # riks-cpp (vs2015)
-  task:
-    build_script:
-      - echo riks-cpp-vs2015
+# riks-node (vs2015)
+task:
+  windows_container:
+    image: cirrusci/windowsservercore:2016
+  build_script:
+    - echo riks-node-vs2015
 
-  # riks-node (vs2015)
-  task:
-    build_script:
-      - echo riks-node-vs2015
-
-# macOS
+# riks-cpp (osx)
 task:
   osx_instance:
     image: high-sierra-xcode-9.4.1
+  build_script:
+    - echo "riks-cpp-osx"
 
-  # riks-cpp (osx)
-  task:
-    build_script:
-      - echo "riks-cpp-osx"
-  
-  # riks-cpp (ios)
-  task:
-    build_script:
-      - echo "riks-cpp-ios"
-  
-  # riks-node (osx)
-  task:
-    build_script:
-      - echo "riks-node-osx"
+# riks-cpp (ios)
+task:
+  osx_instance:
+    image: high-sierra-xcode-9.4.1
+  build_script:
+    - echo "riks-cpp-ios"
 
-  # riks-node (ios)
-  task:
-    build_script:
-      - echo "riks-node-ios"
+# riks-node (osx)
+task:
+  osx_instance:
+    image: high-sierra-xcode-9.4.1
+  build_script:
+    - echo "riks-node-osx"
 
-  # riks-swift
-  task:
-    build_script:
-      - echo "riks-swift"
+# riks-node (ios)
+task:
+  osx_instance:
+    image: high-sierra-xcode-9.4.1
+  build_script:
+    - echo "riks-node-ios"
+
+# riks-swift
+task:
+  osx_instance:
+    image: high-sierra-xcode-9.4.1
+  build_script:
+    - echo "riks-swift"
