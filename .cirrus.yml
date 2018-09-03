@@ -7,7 +7,7 @@ task:
     - python get-pip.py
     - pip install conan
     - apt update
-    - apt install --y cmake
+    - apt install -y cmake
     - cmake --version
     - ./build.sh release x64 linux
 
