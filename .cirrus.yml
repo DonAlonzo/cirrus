@@ -3,7 +3,7 @@ task:
   container:
     image: gcc:latest
   build_script:
-    - gcc -version
+    - gcc --version
     - cmake --version
     - python --version
     - pip --version
