@@ -37,7 +37,7 @@ if defined VCInstallDir (
         cd /d !CWD!
     )
 
-    call python build.py %*
+    call python3 build.py %*
 ) else (
     echo You must run this script from a Visual Studio Command Prompt.
 )
