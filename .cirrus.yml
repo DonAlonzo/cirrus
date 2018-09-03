@@ -1,13 +1,18 @@
 # linux
 task:
   container:
-    image: openjdk:8-jdk
+    image: gcc:latest
   build_script:
-    - curl https://bootstrap.pypa.io/get-pip.py -o get-pip.py
-    - python get-pip.py
-    - pip install conan
-    - pip install cmake
+    - gcc -version
     - cmake --version
+    - python --version
+    - pip --version
+    - conan --version
+    #- curl https://bootstrap.pypa.io/get-pip.py -o get-pip.py
+    #- python get-pip.py
+    #- pip install conan
+    #- pip install cmake
+    #- cmake --version
     - ./build.sh release x64 linux
 
 # vs2015
