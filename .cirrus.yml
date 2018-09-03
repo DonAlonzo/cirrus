@@ -1,8 +1,74 @@
-# riks-java
+# Linux
 task:
-  name: riks-java
   container:
     image: openjdk:8-jdk
-  build_script:
-    - echo "riks-java"
 
+  # riks-java
+  task:
+    build_script:
+      - echo "riks-java"
+ 
+  # riks-js
+  task:
+    build_script:
+      - echo "riks-js"
+  
+  # riks-cpp (Linux)
+  task:
+    build_script:
+      - echo "riks-cpp-linux"
+
+  # riks-node (Linux)
+  task:
+    build_script:
+      - echo "riks-node-linux"
+
+# Windows
+task:
+  windows_container:
+    image: cirrusci/windowsservercore:2016
+
+  # riks-net
+  task:
+    build_script:
+      - echo riks-net
+
+  # riks-cpp (vs2015)
+  task:
+    build_script:
+      - echo riks-cpp-vs2015
+
+  # riks-node (vs2015)
+  task:
+    build_script:
+      - echo riks-node-vs2015
+
+# macOS
+task:
+  osx_instance:
+    image: high-sierra-xcode-9.4.1
+
+  # riks-cpp (osx)
+  task:
+    build_script:
+      - echo "riks-cpp-osx"
+  
+  # riks-cpp (ios)
+  task:
+    build_script:
+      - echo "riks-cpp-ios"
+  
+  # riks-node (osx)
+  task:
+    build_script:
+      - echo "riks-node-osx"
+
+  # riks-node (ios)
+  task:
+    build_script:
+      - echo "riks-node-ios"
+
+  # riks-swift
+  task:
+    build_script:
+      - echo "riks-swift"
