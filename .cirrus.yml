@@ -3,10 +3,9 @@ task:
   container:
     image: gcc:latest
   build_script:
-    - gcc --version
-    - cmake --version
     - python --version
     - pip --version
+    - cmake --version
     - conan --version
     #- curl https://bootstrap.pypa.io/get-pip.py -o get-pip.py
     #- python get-pip.py
