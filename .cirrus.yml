@@ -1,0 +1,7 @@
+# riks-java
+task:
+  name: riks-java
+  container:
+    image: openjdk:8-jdk
+  build_script:
+    - echo "riks-java"
