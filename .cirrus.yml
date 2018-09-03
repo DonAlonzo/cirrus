@@ -10,7 +10,7 @@ task:
   windows_container:
     image: cirrusci/windowsservercore:2016
   build_script:
-    - ./build.sh release x64 vs2015
+    - build release x64 vs2015
 
 # macOS
 task:
