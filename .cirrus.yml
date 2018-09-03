@@ -76,8 +76,8 @@ task:
     - echo "riks-node-ios"
 
 # riks-swift
-task:
-  osx_instance:
-    image: high-sierra-xcode-9.4.1
-  build_script:
-    - echo "riks-swift"
+#task:
+#  osx_instance:
+#    image: high-sierra-xcode-9.4.1
+#  build_script:
+#    - echo "riks-swift"
