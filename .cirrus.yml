@@ -5,9 +5,9 @@ task:
   build_script:
     - curl https://bootstrap.pypa.io/get-pip.py -o get-pip.py
     - python get-pip.py
-    - pip --version
     - pip install conan
-    - conan --version
+    - apt update
+    - apt install cmake
     - cmake --version
     - ./build.sh release x64 linux
 
